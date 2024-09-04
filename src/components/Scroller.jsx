@@ -6,7 +6,7 @@ import {
   useTransform,
   useMotionValue,
   useVelocity,
-  useAnimationFrame
+  useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
@@ -16,10 +16,10 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
-    stiffness: 400
+    stiffness: 400,
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false
+    clamp: false,
   });
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
@@ -38,7 +38,10 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   });
   return (
     <div className="overflow-hidden tracking-[-2px] leading[0.8] m-0 flex flex-nowrap">
-      <motion.div className="font-semibold uppercase text-6xl flex whitespace-nowrap flex-nowrap" style={{ x }}>
+      <motion.div
+        className="font-semibold uppercase text-6xl flex whitespace-nowrap flex-nowrap text-zinc-500"
+        style={{ x }}
+      >
         <span className="block mr-[30px]">{children} </span>
         <span className="block mr-[30px]">{children} </span>
         <span className="block mr-[30px]">{children} </span>
@@ -55,8 +58,8 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 export default function Scroller() {
   return (
     <section className="relative pt-[85vh] pb-[85vh]">
-      <ParallaxText baseVelocity={-2}>Framer Motion</ParallaxText>
-      <ParallaxText baseVelocity={2}>Scroll velocity</ParallaxText>
+      <ParallaxText baseVelocity={-2}>Synergia 2024</ParallaxText>
+      <ParallaxText baseVelocity={2}>Lorem Ipsum</ParallaxText>
     </section>
   );
 }

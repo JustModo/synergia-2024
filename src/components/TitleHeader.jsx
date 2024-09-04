@@ -10,7 +10,10 @@ export default function TitleHeader({ gradientColors, title }) {
         viewBox="0 0 213 325"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-10"
+        className="md:w-10 w-6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <defs>
           <linearGradient
@@ -24,10 +27,12 @@ export default function TitleHeader({ gradientColors, title }) {
               offset="0%"
               style={{ stopColor: startColor, stopOpacity: 1 }}
             />
-            <stop
-              offset="50%"
-              style={{ stopColor: midColor, stopOpacity: 1 }}
-            />
+            {midColor && (
+              <stop
+                offset="50%"
+                style={{ stopColor: midColor, stopOpacity: 1 }}
+              />
+            )}
             <stop
               offset="100%"
               style={{ stopColor: endColor, stopOpacity: 1 }}
@@ -39,14 +44,33 @@ export default function TitleHeader({ gradientColors, title }) {
           fill={`url(#dynamicGradient-${title})`}
         />
       </motion.svg>
-      <motion.h1
-        className="text-4xl md:text-6xl bg-clip-text text-transparent py-3"
-        style={{
-          backgroundImage: `linear-gradient(90deg, ${startColor}, ${midColor}, ${endColor})`,
-        }}
+      <motion.div
+        className="flex flex-row w-full items-center justify-center relative"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {title}
-      </motion.h1>
+        <motion.div
+          className="w-full h-1 bg-clip-border border-0 border-b-2 border-transparent mt-8 rounded-full border-dashed dash opacity-70"
+          style={{
+            backgroundImage: `linear-gradient(90deg, transparent, ${startColor}, ${
+              midColor ? midColor + "," : ""
+            } ${endColor}, transparent)`,
+          }}
+        />
+        <motion.div className="absolute mt-8 bg-black">
+          <motion.h1
+            className="text-4xl md:text-6xl bg-clip-text text-transparent py-3 px-6"
+            style={{
+              backgroundImage: `linear-gradient(90deg, ${startColor}, ${
+                midColor && midColor + ","
+              } ${endColor})`,
+            }}
+          >
+            {title}
+          </motion.h1>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 }
