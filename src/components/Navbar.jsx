@@ -9,7 +9,7 @@ export default function Navbar({ opacity }) {
     >
       <h1 className="cursor-pointer lg:block hidden">ABOUT</h1>
       <h1 className="cursor-pointer lg:block hidden">EVENTS</h1>
-      <img src={Logo} className="w-56"/>
+      <img src={Logo} className="md:w-56 w-40"/>
       <h1 className="cursor-pointer lg:block hidden">GALLERY</h1>
       <h1 className="cursor-pointer lg:block hidden">BENEFITS</h1>
     </motion.div>
