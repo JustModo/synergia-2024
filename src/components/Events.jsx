@@ -1,11 +1,12 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import TitleHeader from "./TitleHeader";
 import DevhostLogo from "./DevhostLogo";
-import DEVHOST from "../assets/devhostbanner.png";
-import SSTH from "../assets/ssthbanner.png";
-import SRC from "../assets/srcbanner.png";
 import { motion } from "framer-motion";
 import SSTHLogo from "./SSTHLogo";
+import SRCLogo from "./SRCLogo";
+import SSTHBlob from "./Blobs/SSTHBlob";
+import DevhostBlob from "./Blobs/DevhostBlob";
+import SRCBlob from "./Blobs/SRCBlob";
 
 export default function Events() {
   return (
@@ -16,21 +17,10 @@ export default function Events() {
           title={"SSTH"}
         />
         <SSTHLogo />
+
         <div className="flex items-center justify-end flex-col md:flex-row">
-          <div className="max-w-md pb-12 flex items-center justify-between w-4/5">
-            <motion.img
-              initial={{ opacity: 0, y: 50, scale: 0.5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 8,
-                mass: 0.5,
-                duration: 0.5,
-              }}
-              src={SSTH}
-              className="h-full"
-            />
+          <div className="max-w-lg pb-12 flex items-center justify-between w-4/5 relative">
+            <SSTHBlob />
           </div>
           <div className="flex flex-col md:items-end md:text-end items-center text-center w-full bg-g">
             <motion.h1
@@ -82,42 +72,19 @@ export default function Events() {
             </motion.p>
           </div>
           <div className="max-w-md pb-12  flex items-center justify-between w-4/5">
-            <motion.img
-              initial={{ opacity: 0, y: 50, scale: 0.5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 8,
-                mass: 0.5,
-                duration: 0.5,
-              }}
-              src={DEVHOST}
-              className="h-full"
-            />
+            <DevhostBlob />
           </div>
         </div>
       </motion.div>
-      <motion.div className="w-full md:px-14 lg:px-44 px-4 py-16 min-h-screen">
+      <motion.div className="w-full md:px-14 lg:px-44 px-4 py-16 min-h-screen flex flex-col justify-center">
         <TitleHeader
           gradientColors={["#833ab4", "#fd1d1d", "#fcb045"]}
           title={"SRC"}
         />
+        <SRCLogo />
         <div className="flex items-center justify-end flex-col md:flex-row">
           <div className="max-w-md pb-12  flex items-center justify-between w-4/5">
-            <motion.img
-              initial={{ opacity: 0, y: 50, scale: 0.5 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 8,
-                mass: 0.5,
-                duration: 0.5,
-              }}
-              src={SRC}
-              className="h-full"
-            />
+            <SRCBlob />
           </div>
           <div className="flex flex-col md:items-end md:text-end items-center text-center w-full bg-g">
             <motion.h1

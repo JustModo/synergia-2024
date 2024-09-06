@@ -6,6 +6,7 @@ import Scroller from "./components/Scroller";
 import Countdown from "./components/Countdown";
 import Events from "./components/Events";
 import EntryCard from "./components/EntryCard";
+import Footer from "./components/Footer";
 
 export default function App() {
   const containerRef = useRef(null);
@@ -30,6 +31,7 @@ export default function App() {
       </motion.div>
       <Events />
       <Scroller />
+      <Footer />
     </div>
   );
 }
