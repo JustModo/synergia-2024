@@ -1,5 +1,5 @@
 import Title from "./Title";
-import Banner from "../assets/Synergia2023/VIG05501.jpg";
+import Banner from "../assets/banner.jpg";
 import { motion } from "framer-motion";
 
 export default function About() {

@@ -34,7 +34,7 @@ const useCountdown = (targetDate) => {
 };
 
 export default function Countdown() {
-  const targetDate = new Date("2024-10-09T08:30:00");
+  const targetDate = new Date("2024-11-07T08:30:00");
   const timeLeft = useCountdown(targetDate);
 
   const animateVariants = {

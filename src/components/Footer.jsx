@@ -2,7 +2,8 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Logo from "../assets/Logo.png";
 import { motion } from "framer-motion";
 import { FaMeta } from "react-icons/fa6";
-export default function Footer() {
+
+export default function Footer({ refTag }) {
   return (
     <motion.div
       className="w-full flex md:flex-row flex-col p-16 gap-10"
@@ -10,6 +11,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ amount: 0.4 }}
+      ref={refTag}
     >
       <motion.div className="w-full flex md:items-start items-center justify-center gap-5 flex-col p-4">
         <img src={Logo} className="max-w-sm" />

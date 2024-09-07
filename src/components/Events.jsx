@@ -8,10 +8,13 @@ import SSTHBlob from "./Blobs/SSTHBlob";
 import DevhostBlob from "./Blobs/DevhostBlob";
 import SRCBlob from "./Blobs/SRCBlob";
 
-export default function Events() {
+export default function Events({ refTag }) {
   return (
     <Fragment>
-      <motion.div className="w-full md:px-14 lg:px-44 px-4 pb-16 min-h-screen flex flex-col justify-center">
+      <motion.div
+        className="w-full md:px-14 lg:px-44 px-4 pb-16 min-h-screen flex flex-col justify-center"
+        ref={refTag}
+      >
         <Divider gradientColors={["#ef32d9", "", "#89fffd"]} title={"SSTH"} />
         <SSTHLogo />
 

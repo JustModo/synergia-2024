@@ -5,7 +5,6 @@ export default function DevhostLogo() {
     hidden: { pathLength: 0, opacity: 0, fill: "rgba(0, 0, 0, 0)" },
     visible: ({ color, i }) => {
       const delay = 0.1 + i * 0.1;
-      console.log(color);
       return {
         pathLength: 1,
         opacity: 1,
