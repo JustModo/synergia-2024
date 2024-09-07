@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import Divider from "./Divider";
-import DevhostLogo from "./DevhostLogo";
+import DevhostLogo from "./Logos/DevhostLogo";
 import { motion } from "framer-motion";
-import SSTHLogo from "./SSTHLogo";
-import SRCLogo from "./SRCLogo";
+import SSTHLogo from "./Logos/SSTHLogo";
+import SRCLogo from "./Logos/SRCLogo";
 import SSTHBlob from "./Blobs/SSTHBlob";
 import DevhostBlob from "./Blobs/DevhostBlob";
 import SRCBlob from "./Blobs/SRCBlob";
@@ -31,7 +31,16 @@ export default function Events() {
               solutions.
             </motion.p>
             <div>
-              <button className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+              <button
+                className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                onClick={() =>
+                  window.open(
+                    "https://ssth.in",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
                 View More
               </button>
             </div>
@@ -57,7 +66,16 @@ export default function Events() {
               electrifying esports tournament.
             </motion.p>
             <div>
-              <button className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+              <button
+                className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                onClick={() =>
+                  window.open(
+                    "https://devhost.sosc.org.in",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
                 View More
               </button>
             </div>
@@ -88,11 +106,20 @@ export default function Events() {
               A dynamic and challenging environment featuring two vibrant and
               thrilling competitions.
             </motion.p>
-            <div>
-              <button className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+            {/* <div>
+              <button
+                className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                onClick={() =>
+                  window.open(
+                    "https://ssth.in",
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
                 View More
               </button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </motion.div>

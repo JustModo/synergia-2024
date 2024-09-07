@@ -51,14 +51,14 @@ export default function Divider({ gradientColors, title }) {
         // transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="w-full h-1 bg-clip-border border-0 border-b-2 border-transparent mt-8 rounded-full opacity-70"
+          className="w-full h-1 bg-clip-border border-0 border-b-2 border-transparent mt-8 rounded-full opacity-70 -z-20"
           style={{
             backgroundImage: `linear-gradient(90deg, transparent, ${startColor}, ${
               midColor ? midColor + "," : ""
             } ${endColor}, transparent)`,
           }}
         />
-        <motion.div className="absolute mt-8 p-4 bg-black">
+        <motion.div className="absolute mt-8 p-4 flex items-center justify-center">
           {/* <motion.h1
             className="text-2xl md:text-4xl bg-clip-text text-transparent py-3 px-6"
             style={{
@@ -69,11 +69,12 @@ export default function Divider({ gradientColors, title }) {
           >
             {title}
           </motion.h1> */}
+          <div className="bg-black h-1 w-full absolute -z-20" />
           <motion.svg
             viewBox="0 0 213 325"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="md:w-8 w-6"
+            className="md:w-8 w-6 z-10"
             // initial={{ opacity: 0, y: 50 }}
             // whileInView={{ opacity: 1, y: 0 }}
             // transition={{ duration: 0.5 }}

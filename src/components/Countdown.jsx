@@ -44,7 +44,7 @@ export default function Countdown() {
   };
 
   return (
-    <div className="absolute text-2xl md:text-5xl font-semibold text-zinc-300 flex gap-5 font-mono w-4/5 max-w-xl overflow-hidden justify-between bottom-16">
+    <div className="absolute text-2xl md:text-5xl font-semibold text-zinc-300 flex gap-5 font-mono w-4/5 max-w-xl overflow-hidden justify-between bottom-16 z-10">
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <motion.div
           key={index}
@@ -54,7 +54,7 @@ export default function Countdown() {
           transition={{ duration: 0.5 }}
         >
           <div className="h-20 flex items-center justif relative overflow-hidden">
-            <div className="absolute top-0 bg-gradient-to-b w-full h-5 from-black to-transparent z-10" />
+            {/* <div className="absolute top-0 bg-gradient-to-b w-full h-5 from-black to-transparent z-10" /> */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={value}
@@ -68,7 +68,7 @@ export default function Countdown() {
                 {String(value).padStart(2, "0")}
               </motion.div>
             </AnimatePresence>
-            <div className="absolute bottom-0 bg-gradient-to-t w-full h-5 from-black to-transparent z-10" />
+            {/* <div className="absolute bottom-0 bg-gradient-to-t w-full h-5 from-black to-transparent z-10" /> */}
           </div>
           <span className="md:text-base text-sm -mt-3 md:mt-0 z-20 font-bold">{unit}</span>
         </motion.div>

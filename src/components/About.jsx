@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <motion.div
-      className="relative pt-28"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ amount: 0.4 }}
-    >
+    <motion.div className="relative pt-28">
       <Title title={"About"} />
       <div className="grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 overflow-hidden gap-10 pb-60">
         <div>
@@ -35,7 +29,16 @@ export default function About() {
             where every participant is a pioneer shaping tomorrow.
           </p>
           <div>
-            <button className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+            <button
+              className="bg-white text-black font-semibold text-sm px-6 py-3 rounded-full inline-flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+              onClick={() =>
+                window.open(
+                  "https://www.sahyadri.edu.in",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               View More
             </button>
           </div>

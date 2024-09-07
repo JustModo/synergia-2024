@@ -39,17 +39,17 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   return (
     <div className="overflow-hidden tracking-[-2px] leading[0.8] m-0 flex flex-nowrap">
       <motion.div
-        className="font-semibold uppercase text-6xl flex whitespace-nowrap flex-nowrap text-zinc-500"
+        className="font-semibold uppercase md:text-6xl text-3xl flex whitespace-nowrap flex-nowrap text-zinc-500 gap-8"
         style={{ x }}
       >
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
-        <span className="block mr-[30px]">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
+        <span className="block">{children} </span>
       </motion.div>
     </div>
   );
@@ -57,9 +57,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function Scroller() {
   return (
-    <section className="relative pt-40 pb-20">
+    <div className="relative mt-40 mb-20">
+      <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black to-transparent z-10" />
+      <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black to-transparent z-10" />
       <ParallaxText baseVelocity={-2}>Synergia 2024</ParallaxText>
       <ParallaxText baseVelocity={2}>Coming Soon</ParallaxText>
-    </section>
+    </div>
   );
 }
