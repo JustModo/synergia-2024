@@ -6,3 +6,7 @@
   @apply bg-black text-white;
   font-family: "Rubik Variable", sans-serif;
 }
+
+.react-photo-album--photo img {
+  @apply rounded-lg object-cover;
+}

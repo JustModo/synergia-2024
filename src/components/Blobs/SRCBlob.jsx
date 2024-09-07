@@ -36,6 +36,7 @@ export default function SRCBlob() {
       initial="hidden"
       whileInView={"visible"}
       variants={containerVariants}
+      viewport={{ amount: 0.4 }}
     >
       <motion.g variants={textVariants}>
         <path

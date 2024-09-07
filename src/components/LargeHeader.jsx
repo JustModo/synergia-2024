@@ -155,7 +155,7 @@ const LargeHeader = () => {
   }
 
   return (
-    <div id="large-header" className="large-header h-full" ref={largeHeaderRef}>
+    <div id="large-header" className="large-header h-full opacity-50" ref={largeHeaderRef}>
         <canvas id="demo-canvas" ref={canvasRef}></canvas>
     </div>
   );

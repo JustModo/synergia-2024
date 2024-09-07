@@ -57,9 +57,9 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function Scroller() {
   return (
-    <section className="relative pt-[85vh] pb-[85vh]">
+    <section className="relative pt-40 pb-20">
       <ParallaxText baseVelocity={-2}>Synergia 2024</ParallaxText>
-      <ParallaxText baseVelocity={2}>Lorem Ipsum</ParallaxText>
+      <ParallaxText baseVelocity={2}>Coming Soon</ParallaxText>
     </section>
   );
 }

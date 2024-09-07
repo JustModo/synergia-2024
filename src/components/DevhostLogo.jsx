@@ -26,7 +26,7 @@ export default function DevhostLogo() {
       viewBox="0 0 1647 239"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full max-w-xl self-center px-8 mb-20"
+      className="w-full max-w-xl self-center px-8"
       initial="hidden"
       whileInView={"visible"}
       stroke={"white"}

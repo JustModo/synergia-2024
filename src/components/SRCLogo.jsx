@@ -24,7 +24,7 @@ export default function SRCLogo() {
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 664.24 339.52"
-      className="w-full max-w-xl self-center px-20 mb-20 pt-10 fill-white"
+      className="w-full max-w-xl self-center px-20 pt-10 fill-white"
       initial="hidden"
       whileInView={"visible"}
       variants={containerVariants}

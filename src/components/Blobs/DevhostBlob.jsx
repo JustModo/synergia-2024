@@ -25,6 +25,7 @@ export default function DevhostBlob() {
       },
     },
   };
+
   return (
     <motion.svg
       width="700"
@@ -36,6 +37,7 @@ export default function DevhostBlob() {
       initial="hidden"
       whileInView={"visible"}
       variants={containerVariants}
+      viewport={{ amount: 0.4 }}
     >
       <motion.g variants={textVariants}>
         <path

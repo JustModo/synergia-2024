@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 
-export default function TitleHeader({ gradientColors, title }) {
+export default function Divider({ gradientColors, title }) {
   const [startColor, midColor, endColor] = gradientColors;
 
   return (
