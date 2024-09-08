@@ -21,7 +21,7 @@ export default function EntryStrings() {
   return (
     <div
       ref={containerRef}
-      className="absolute w-full h-full top-0 overflow-hidden -z-10 items-center justify-center md:flex hidden"
+      className="absolute w-full h-full top-0 overflow-hidden -z-10 items-center justify-center lg:flex hidden"
     >
       <motion.svg
         width="1536"

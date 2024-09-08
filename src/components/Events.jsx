@@ -22,14 +22,14 @@ export default function Events({ refTag }) {
           <div className="max-w-lg pb-12 flex items-center justify-between w-4/5 relative">
             <SSTHBlob />
           </div>
-          <div className="flex flex-col md:items-end md:text-end items-center text-center w-full bg-g">
+          <div className="flex flex-col md:items-end md:text-end items-center text-center w-full">
             <motion.h1
-              className="md:text-5xl max-w-3xl w-4/5 text-3xl font-normal"
+              className="md:text-5xl max-w-3xl w-4/5 text-3xl font-normal mix-blend-difference"
               style={{ lineHeight: 1.2 }}
             >
               Innovate Today. Lead the future.
             </motion.h1>
-            <motion.p className="md:text-2xl max-w-xl w-4/5 text-lg py-6 font-light text-zinc-300">
+            <motion.p className="md:text-2xl max-w-xl w-4/5 text-lg py-6 font-light text-zinc-300 mix-blend-difference">
               A tech-innovation nexus where young visionaries explore and devise
               solutions.
             </motion.p>
@@ -59,12 +59,12 @@ export default function Events({ refTag }) {
         <div className="flex items-center justify-end flex-col-reverse md:flex-row">
           <motion.div className="flex flex-col md:items-start md:text-start items-center text-center w-full bg-g">
             <motion.h1
-              className="md:text-5xl max-w-3xl w-4/5 text-3xl font-normal"
+              className="md:text-5xl max-w-3xl w-4/5 text-3xl font-normal mix-blend-difference"
               style={{ lineHeight: 1.2 }}
             >
               Sparking innovation. Igniting Curiosity.
             </motion.h1>
-            <motion.p className="md:text-2xl max-w-xl w-4/5 text-lg py-6 font-light text-zinc-300">
+            <motion.p className="md:text-2xl max-w-xl w-4/5 text-lg py-6 font-light text-zinc-300 mix-blend-difference">
               A technical extravaganza featuring a 24-Hour hackathon and an
               electrifying esports tournament.
             </motion.p>
@@ -105,9 +105,8 @@ export default function Events({ refTag }) {
             >
               Engineer. Compete. Dominate.
             </motion.h1>
-            <motion.p className="md:text-2xl max-w-xl w-4/5 text-lg py-6 font-light text-zinc-300">
-              A dynamic and challenging environment featuring two vibrant and
-              thrilling competitions.
+            <motion.p className="md:text-2xl max-w-lg w-4/5 text-lg py-6 font-light text-zinc-300">
+              Where robots come to life and imagination knows no bounds!
             </motion.p>
             {/* <div>
               <button

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <motion.div className="relative pt-28">
       <Title title={"About"} />
-      <div className="grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 overflow-hidden gap-10 pb-60">
+      <div className="md:grid md:grid-cols-2 md:grid-rows-1 flex flex-col overflow-hidden gap-10 pb-60">
         <div>
           <img
             src={Banner}
